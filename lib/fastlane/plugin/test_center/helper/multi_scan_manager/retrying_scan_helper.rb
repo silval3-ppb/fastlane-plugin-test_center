@@ -204,7 +204,7 @@ module TestCenter
             FastlaneCore::UI.verbose(after_testrun_message)
 
             if @options[:retry_test_runner_failures]
-              continue_with_build_failure(exception)
+              handle_test_failure
             else
               handle_build_failure(exception)
             end
